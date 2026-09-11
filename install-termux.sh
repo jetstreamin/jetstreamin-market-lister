@@ -1,6 +1,8 @@
 #!/data/data/com.termux/files/usr/bin/bash
 set -euo pipefail
 pkg update -y
+apt --fix-broken install -y
+pkg upgrade -y
 pkg install -y python termux-api
 chmod +x app.py jet
 mkdir -p data/photos data/exports
